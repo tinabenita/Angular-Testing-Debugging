@@ -1,9 +1,14 @@
-import { Injectable } from '@angular/core';
+import { Injectable, ErrorHandler } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ErrorMetadataService {
+export class ErrorMetadataService implements ErrorHandler {
+  
+  
+  public handleError(error: any): void {
+    console.error('Hello from ErrorMetadataService', error);
+  }
 
-  constructor() { }
+
 }
